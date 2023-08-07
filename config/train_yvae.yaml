@@ -1,0 +1,44 @@
+start_epoch: 0
+load_avatarmodule_checkpoint: 'checkpoints/avatar_zyx/latest'
+load_yvaemodule_checkpoint: 'checkpoints/yvae_zyx_xyl/latest'
+lr: 1e-4
+gpu_ids: [0]
+batch_size: 16
+
+dataset:
+  dataroot: 'demo_dataset'
+  video_name_avatar: 'zyx/train'
+  video_name_actor: 'xyl/train'
+  resolution: 512
+
+yvaemodule:
+  exp_dim_2d: 256
+  encoder_dims: [3, 32, 64, 128, 256]
+  neck_dims: [512, 512]
+  decoder_dims: [512, 256, 128, 64, 3]
+  mapping_dims: [256, 256, 256, 128]
+  domains: ['zyx', 'xyl']
+
+avatarmodule:
+  exp_dim_2d: 256
+  encoder_dims: [3, 32, 64, 128, 256]
+  mapping_dims: [256, 256, 256, 128]
+  headmodule:
+    triplane_res: 256
+    triplane_dim: 32
+    exp_dim_3d: 128
+    density_mlp: [32, 128, 1]
+    color_mlp: [59, 128, 32]
+    view_freq: 4
+    noise: 0.01
+    bbox: [[-1.5, 1.5], [-1.8, 1.8], [-1.9, 1.1]]
+  upsampler_capacity: 32
+
+
+recorder:
+  name: 'yvae_zyx_xyl'
+  logdir: 'log/yvae_zyx_xyl'
+  checkpoint_path: 'checkpoints'
+  result_path: 'results'
+  save_freq: 1000
+  show_freq: 100
