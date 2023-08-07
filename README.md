@@ -1,6 +1,6 @@
 # LatentAvatar: Learning Latent Expression Code for Expressive Neural Head Avatar
 ## [Paper](https://arxiv.org/abs/2305.01190) | [Project Page](https://liuyebin.com/latentavatar)
-<img src="assets/teaser.png" width="840" height="230"/> 
+<img src="assets/teaser.png" width="840" height="600"/> 
 
 ## Getting Started
 * Create a conda environment `conda env create -f environment.yml`
