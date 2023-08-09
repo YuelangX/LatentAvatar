@@ -3,7 +3,7 @@
 <img src="assets/teaser.png" width="840" height="550"/> 
 
 ## Getting Started
-* Create a conda environment `conda env create -f environment.yml`
+* Create a conda environment `conda env create -f environment.yaml`
 * Install Pytorch3d `pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py38_cu113_pyt1120/download.html`
 * Download our dataset [Google drive](https://drive.google.com/file/d/1dW4AckKW87HyKhpoHEtxsn0STgYsAMXJ/view?usp=sharing) and place `demo_dataset` in this folder
 * Download [checkpoint](https://download.openmmlab.com/mmpose/face/mobilenetv2/mobilenetv2_coco_wholebody_face_256x256-4a3f096e_20210909.pth) of the landmark detector from [mmpose](https://github.com/open-mmlab/mmpose)
